@@ -14,12 +14,11 @@ int main ()
     cout << "Masukkan kolom matriks(n): ";
     cin >> n;
     int matriks[m][n];
-    int newMat[m][n];
     string input;
     const char *angka;
     angka = input.c_str();
     getline(cin, input);
-    int temp = 0;
+    int temp = 0, j_temp, counter = 1, times = 1, x = 1;
     for (int i = 0; i < m; i++)
     {
         cout << "Masukkan nilai tiap kolom pada baris ke-" << i + 1 << " (Ex:1 10 3 -11): ";
@@ -27,7 +26,7 @@ int main ()
         angka = input.c_str();
         for (int j = 0, k = 0; j < input.size(); j+=2, k++){
             if(angka[j] == '-'){
-                int j_temp = j, counter = 1, times = 1, x = 1;
+                j_temp = j, counter = 1, times = 1, x = 1;
                 j_temp++;
                 while (angka[j_temp + counter] != ' ' && angka[j_temp + counter] != '\0')
                 {
@@ -47,7 +46,7 @@ int main ()
 
             else if (angka[j + 1] != ' ' && angka[j + 1] != '\0')
             {
-                int j_temp = j, counter = 1, times = 1, x = 1;
+                j_temp = j, counter = 1, times = 1, x = 1;
                 while (angka[j_temp + counter] != ' ' && angka[j_temp + counter] != '\0')
                 {
                     times *= 10;
