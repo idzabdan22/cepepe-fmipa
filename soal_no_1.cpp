@@ -14,11 +14,11 @@ int main ()
     const char *angka = input.c_str();
     cout << "\nVECTOR: ";
     cout << "[" << angka << "]" << endl;
-    int vec_sum = 0, counter_arr = 0, temp = 0;
+    int vec_sum = 0, counter_arr = 0, temp = 0, j_temp, counter = 1, times = 1, x = 1;
     for(int j = 0; j < input.size(); j+=2) 
     {
         if(angka[j] == '-'){
-            int j_temp = j, counter = 1, times = 1, x = 1;
+            j_temp = j, counter = 1, times = 1, x = 1;
             j_temp++;
             while (angka[j_temp + counter] != ',' && angka[j_temp + counter] != '\0')
             {
@@ -38,7 +38,7 @@ int main ()
 
         else if (angka[j + 1] != ',' && angka[j + 1] != '\0')
         {
-            int j_temp = j, counter = 1, times = 1, x = 1;
+            j_temp = j, counter = 1, times = 1, x = 1;
             while (angka[j_temp + counter] != ',' && angka[j_temp + counter] != '\0')
             {
                 times *= 10;
@@ -62,7 +62,7 @@ int main ()
     for (int j = 0, k = 0; j < input.size(); j += 2, k++)
     {
         if(angka[j] == '-'){
-            int j_temp = j, counter = 1, times = 1, x = 1;
+            j_temp = j, counter = 1, times = 1, x = 1;
             j_temp++;
             while (angka[j_temp + counter] != ',' && angka[j_temp + counter] != '\0')
             {
@@ -82,7 +82,7 @@ int main ()
 
         else if (angka[j + 1] != ',' && angka[j + 1] != '\0')
         {
-            int j_temp = j, counter = 1, times = 1, x = 1;
+            j_temp = j, counter = 1, times = 1, x = 1;
             while (angka[j_temp + counter] != ',' && angka[j_temp + counter] != '\0')
             {
                 times *= 10;
