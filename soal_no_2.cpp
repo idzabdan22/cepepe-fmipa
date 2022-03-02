@@ -65,7 +65,7 @@ int main ()
                 j += (counter-1);
             }
             else matriks[i][k] = angka[j] - '0';
-            (matriks[i][k] >= max) ? max = matriks[i][k] : max = max;
+            (matriks[i][k] > max) ? max = matriks[i][k] : max = max;
         }
     }
     cout << endl;
